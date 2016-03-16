@@ -1,0 +1,3 @@
+[submodule "submod-square"]
+	path = submod-square
+	url = https://github.com/praqma-test/submod-square.git
