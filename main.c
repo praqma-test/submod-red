@@ -1,3 +1,7 @@
+/**
+ * This program requires the following git submodules:
+ * - square
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
