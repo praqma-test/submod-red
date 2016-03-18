@@ -1,4 +1,2 @@
 #!/bin/bash
-gcc main.c -o main \
-    -Isubmod-square
-
+tar -czvf archive.tgz lower-letters/text.txt

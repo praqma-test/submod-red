@@ -1,3 +1,3 @@
-[submodule "submod-square"]
-	path = submod-square
-	url = https://github.com/praqma-test/submod-square.git
+[submodule "lower-letters"]
+	path = lower-letters
+	url = https://github.com/praqma-test/lower-letters.git
