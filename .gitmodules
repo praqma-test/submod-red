@@ -1,3 +1,6 @@
 [submodule "lower-letters"]
 	path = lower-letters
 	url = https://github.com/praqma-test/lower-letters.git
+[submodule "capital-letters"]
+	path = capital-letters
+	url = https://github.com/praqma-test/capital-letters.git
