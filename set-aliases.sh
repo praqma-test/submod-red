@@ -11,13 +11,13 @@ git config alias.pullall "!f() { git pull && \
   }; f"
 
 # Show the status of the super repository and all submodules.
-git config alias.statusall "!f() { git status && \
-    git submodule foreach git status; \
+git config alias.statusall "!f() { \
+    git submodule foreach git status && \
+    git status; \
   }; f"
 
 # Commit in submodules and the super repository.
-# Arguments: The commit arguments, for example: -m 'commit message'
 git config alias.commitall "!f() { \
-    git submodule foreach git commit $@
-    git commit $@
+    git submodule foreach git commit
+    git commit
   }; f"
