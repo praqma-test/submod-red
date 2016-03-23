@@ -17,12 +17,14 @@ git config alias.statusall "!f() { \
   }; f"
 
 # Commit in submodules and the super repository.
+# Use 'git diff' to check that there are staged changes - otherwise 'git commit'
+# exits with an error code.
 git config alias.commitall "!f() { \
     git submodule foreach git diff --quiet --exit-code --cached || git commit && \
     git commit; \
   }; f"
 
-# Push in submodules and the super repository.
+# Push in submodules, update the submodules, and push in the super repository.
 git config alias.pushall "!f() { \
     git submodule foreach git push && \
     git submodule update --recursive && \
