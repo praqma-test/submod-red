@@ -24,9 +24,10 @@ git config alias.commitall "!f() { \
     git commit; \
   }; f"
 
-# Push in submodules, update the submodules, and push in the super repository.
+# Push in submodules, add the submodules, and push in the super repository.
 git config alias.pushall "!f() { \
     git submodule foreach git push && \
-    git submodule update --recursive && \
+    git add lower-letters && \
+    git add capital-letters && \
     git push;
   }; f"
