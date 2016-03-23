@@ -34,6 +34,6 @@ git config alias.commitall "!f() { \
 git config alias.pushall "!f() { \
     git submodule foreach git push && \
     grep path .gitmodules | sed 's/.*= //' | xargs git add && \
-    git commit -m 'Update submodules' && \
+    git diff --quiet --exit-code --cached || git commit -m 'Update submodules' && \
     git push; \
   }; f"
