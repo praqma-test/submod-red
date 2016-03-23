@@ -27,7 +27,7 @@ git config alias.commitall "!f() { \
 # Push in submodules, add the submodules, and push in the super repository.
 git config alias.pushall "!f() { \
     git submodule foreach git push && \
-    grep path .gitmodules | sed 's/.*= //' | xargs git add; \
+    grep path .gitmodules | sed 's/.*= //' | xargs git add && \
     git commit -m 'Update submodules' && \
     git push; \
   }; f"
