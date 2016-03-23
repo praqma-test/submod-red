@@ -1,5 +1,5 @@
 #!/bin/bash
-## Set Git aliases (local to this repository)
+## Set Git aliases (local to this repository).
 
 # Pull all remote changes to the super repository
 # and all submodules.
