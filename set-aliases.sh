@@ -26,7 +26,7 @@ git config alias.addall "!f() { \
 # Use 'git diff' to check that there are staged changes - otherwise 'git commit'
 # exits with an error code.
 git config alias.commitall "!f() { \
-    git submodule foreach git diff --quiet --exit-code --cached || git commit && \
+    git submodule foreach git diff --quiet --exit-code || git commit && \
     git commit; \
   }; f"
 
