@@ -29,5 +29,6 @@ git config alias.pushall "!f() { \
     git submodule foreach git push && \
     git add lower-letters && \
     git add capital-letters && \
+    git commit && \
     git push;
   }; f"
