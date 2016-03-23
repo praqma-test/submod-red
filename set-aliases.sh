@@ -18,6 +18,13 @@ git config alias.statusall "!f() { \
 
 # Commit in submodules and the super repository.
 git config alias.commitall "!f() { \
-    git submodule foreach git commit
-    git commit
+    git submodule foreach git diff --quiet --exit-code --cached || git commit && \
+    git commit; \
+  }; f"
+
+# Push in submodules and the super repository.
+git config alias.pushall "!f() { \
+    git submodule foreach git push && \
+    git submodule update --recursive && \
+    git push;
   }; f"
